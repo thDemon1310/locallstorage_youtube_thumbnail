@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Youtube</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <table border="1">
+      <form action="" method="post">
+        <thead>
+          <th colspan="3">Please provide input</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><label for="">Enter thumbnail:</label></td>
+            <td colspan="3">
+              <input
+                type="text"
+                name=""
+                id="input_thumbnail"
+                placeholder="Enter link"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="">Enter video dureation</label></td>
+            <td>
+              <input
+                type="text"
+                name="input_duer"
+                id="input_dur"
+                placeholder="dureation"
+              />
+            </td>
+            <!-- <td><input type="number" name="input_sec" id="input_sec" placeholder="seconds"></td> -->
+          </tr>
+          <tr>
+            <td><label for="input_title">Enter your title:</label></td>
+            <td colspan="3">
+              <input
+                type="text"
+                name="input_title"
+                id="input_title"
+                placeholder="title"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="input_channel">Enter the channel name:</label></td>
+            <td colspan="3">
+              <input
+                type="text"
+                name="input_channel"
+                id="input_channel"
+                placeholder="channel"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="input_views">Enter views:</label></td>
+            <td colspan="3">
+              <input
+                type="number"
+                name="input_views"
+                id="input_views"
+                placeholder="views"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="input_months">Months old:</label></td>
+            <td colspan="3">
+              <input
+                type="number"
+                name="input_months"
+                id="input_months"
+                placeholder="months old"
+              />
+            </td>
+          </tr>
+          <tr><td class="sub"  colspan="2"><input type="button" value="Submit"></td></tr>
+        </tbody>
+      </form>
+    </table>
+    <script src="script.js"></script>
+  </body>
 </html>

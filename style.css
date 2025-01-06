@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(33, 33, 33);
+  gap: 30px;
+}
+
+.container {
+  width: 60vw;
+  height: 140px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 0.5fr 2.6fr 11fr;
+  padding: 8px;
+  gap: 5px;
+  border-radius: 10px;
+  background-color: #6a6a6a76;
+}
+
+.dimension {
+  width: 100%;
+  height: 100%;
+  grid-row: 1/2;
+}
+.sc_no {
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#serial {
+  color: rgb(92, 92, 92);
+  font-size: 18px;
+  font-weight: 550 !important;
+}
+.image {
+  grid-column: 2/3;
+  padding: 5px;
+  position: relative;
+}
+.image img {
+  object-fit: cover;
+  object-position: 0 30%;
+  width: 197.625px;
+  height: 110.5px;
+  border-radius: 15px;
+}
+#dureation {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  right: 13px;
+  min-width: 45px;
+  height: 25px;
+  background-color: rgb(0 0 0 / 57%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+.about {
+  grid-column: 3/4;
+  padding-left: 10px;
+}
+
+#title {
+  margin: 10px 0 20px -5px;
+}
+#title a {
+  color: white;
+  text-decoration: none;
+}
+.channel .color {
+  color: #9c9c9c;
+  font-size: 14px;
+}
+.channel .link {
+  color: #9c9c9c;
+  text-decoration: none;
+}
+table td {
+  color: white;
+  font-size: 23px;
+  position: relative;
+}
+table th {
+  color: white;
+}
+input {
+  font-size: 23px;
+}
+.sub input{
+  position: absolute;
+  right: 50%;
+}
