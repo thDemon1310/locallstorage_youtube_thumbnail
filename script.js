@@ -1,9 +1,11 @@
 // -------title----------
-function Ctitle() {
+async function Ctitle() {
   let key = "title";
   let title = document.getElementById("input_title").value;
-  localStorage.setItem(key, title);
-  title=localStorage.getItem(key);
+  console.log(title);
+  await localStorage.setItem(key, title);
+  title = localStorage.getItem(key);
+  console.log(title);
   document.getElementById("title").children[0].innerHTML = title;
 }
 // -----------dureation---------
@@ -74,11 +76,11 @@ function monthsold() {
     }
   }
 }
-const Submit_data = () => {
-  Ctitle();
-  dure();
-  photo();
-  cname();
-  t_views();
-  monthsold();
+const submit_data = async () => {
+  await Ctitle();
+  // dure();
+  // photo();
+  // cname();
+  // t_views();
+  // monthsold();
 };
