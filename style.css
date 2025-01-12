@@ -95,15 +95,10 @@ body {
 table td {
   color: white;
   font-size: 23px;
-  position: relative;
 }
 table th {
   color: white;
 }
 input {
   font-size: 23px;
-}
-.sub input{
-  position: absolute;
-  right: 50%;
 }
