@@ -30,18 +30,14 @@ function setTime() {
       let min = Math.floor(cal_time);
       let sec = time % 60;
       if (cal_time < 60) {
-        document.getElementById("dureation").innerHTML = `${min}:${sec}`;
-        if (sec == 0) {
-            document.getElementById("dureation").innerHTML = `${min}:${sec}0`;
-        }
+        document.getElementById("dureation").innerHTML = `${min}:${sec}0`;
       } else {
-        hr = min / 60;
+        hr = Math.floor(min / 60);
         document.getElementById("dureation").innerHTML = `${hr}:${min}:${sec}`;
       }
     }
   }
 }
-
 // mere demag mai ek idea aaya hai jo function data set kare ga eg: setTime() use eventlistioner laga ke await karwa do jabtak me genereate per click na kardu.
 
 // =======Get title for video======
@@ -120,7 +116,6 @@ async function getInfo() {
   await getMonth();
 }
 function handleGenerate() {
-  getInfo(); // Store data in localStorage
   setTimeout(() => {
     window.location.href = "thumbnail.html"; // Redirect after saving
   }, 100); // Allow storage time
