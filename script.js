@@ -152,7 +152,7 @@ function getViews() {
 }
 // ---------Set views on your videos-------
 function setViews() {
-  let view = localStorage.getItem("view")*1; // multiplying by 1 converts the string to integer; I can use parseInt() too for this.
+  let view = localStorage.getItem("view") * 1; // multiplying by 1 converts the string to integer; I can use parseInt() too for this.
   let show_view;
   if (view >= 1000000) {
     show_view = Math.floor(view / 1000000) + "M";
@@ -164,3 +164,27 @@ function setViews() {
   document.getElementById("v").innerHTML = show_view;
 }
 // ========= Get how much old is video=======
+function getMonth() {
+  let oldTime = document.getElementById("input_months").value;
+  localStorage.setItem("timeold", oldTime);
+}
+// --------- set months old to template------
+function setMonth() {
+  let oldTime = localStorage.getItem("timeold") * 1;
+  let cal_time = oldTime / 12;
+  if (cal_time < 1) {
+    document.getElementById("o").innerHTML = oldTime;
+    document.getElementById("year").innerHTML = " months";
+  } else {
+    let year = Math.floor(cal_time);
+    let month = oldTime % 12;
+    if (month == 0) {
+      document.getElementById("o").innerHTML = cal_time;
+      document.getElementById("year").innerHTML = " years";
+    } else {
+      document.getElementById("year").innerHTML = "";
+      document.getElementById("o").innerHTML = `${year} years ${month} months`;
+    }
+  }
+}
+
