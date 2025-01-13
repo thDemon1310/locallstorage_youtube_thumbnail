@@ -188,17 +188,17 @@ function setMonth() {
   }
 }
 async function getInfo() {
+  setTimeout(() => {
+    alert(
+      `Please wait while we are pushing your information to localdata base`
+    );
+  }, 1000);
   await getthumbnail();
   await getDure();
   await getTitle();
   await getChannel();
   await getViews();
   await getMonth();
-  setTimeout(() => {
-    alert(
-      `Please wait while we are pushing your information to localdata base`
-    );
-  }, 1000);
 }
 async function setInfo() {
   await setThumbnail();
