@@ -30,15 +30,22 @@ function setTime() {
       let min = Math.floor(cal_time);
       let sec = time % 60;
       if (cal_time < 60) {
-        document.getElementById("dureation").innerHTML = `${min}:${sec}0`;
+        document.getElementById("dureation").innerHTML = `${min}:${sec}`;
+        if (sec == 0) {
+            document.getElementById("dureation").innerHTML = `${min}:${sec}0`
+        }
+        else if (sec <=9) {
+            document.getElementById("dureation").innerHTML = `${min}:0${sec}`
+        }
       } else {
         hr = Math.floor(min / 60);
-        document.getElementById("dureation").innerHTML = `${hr}:${min}:${sec}`;
+        document.getElementById("dureation").innerHTML = `${hr}:${min}:${sec}0`;
       }
     }
   }
 }
 // mere demag mai ek idea aaya hai jo function data set kare ga eg: setTime() use eventlistioner laga ke await karwa do jabtak me genereate per click na kardu.
+//  ye uper ki advise follow nahi ki
 
 // =======Get title for video======
 function getTitle() {
