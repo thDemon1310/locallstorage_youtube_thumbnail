@@ -96,7 +96,7 @@ const setThumbnail = () => {
   pic.src = photo;
 };
 // ======get video dureation======
-function dure() {
+function getDure() {
   let time = document.getElementById("input_dur").value;
   localStorage.setItem("time", time);
 }
@@ -187,4 +187,24 @@ function setMonth() {
     }
   }
 }
-
+async function getInfo() {
+  await getthumbnail();
+  await getDure();
+  await getTitle();
+  await getChannel();
+  await getViews();
+  await getMonth();
+  setTimeout(() => {
+    alert(
+      `Please wait while we are pushing your information to localdata base`
+    );
+  }, 1000);
+}
+async function setInfo() {
+  await setThumbnail();
+  await setTime();
+  await setTitle();
+  await setChannel();
+  await setViews();
+  await setMonth();
+}
