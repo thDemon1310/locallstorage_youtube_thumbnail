@@ -32,14 +32,27 @@ function setTime() {
       if (cal_time < 60) {
         document.getElementById("dureation").innerHTML = `${min}:${sec}`;
         if (sec == 0) {
-            document.getElementById("dureation").innerHTML = `${min}:${sec}0`
-        }
-        else if (sec <=9) {
-            document.getElementById("dureation").innerHTML = `${min}:0${sec}`
+          document.getElementById("dureation").innerHTML = `${min}:${sec}0`;
+        } else if (sec <= 9) {
+          document.getElementById("dureation").innerHTML = `${min}:0${sec}`;
         }
       } else {
         hr = Math.floor(min / 60);
-        document.getElementById("dureation").innerHTML = `${hr}:${min}:${sec}0`;
+        min = min % 60;
+        if (sec == 0) {
+          document.getElementById(
+            "dureation"
+          ).innerHTML = `${hr}:${min}:${sec}0`;
+        } else if (sec <= 9) {
+          document.getElementById(
+            "dureation"
+          ).innerHTML = `${hr}:${min}:0${sec}`;
+        }
+        else{
+            document.getElementById(
+                "dureation"
+              ).innerHTML = `${hr}:${min}:${sec}`;
+        }
       }
     }
   }
